@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Element | DOM</title>
+    <style>
+      *,
+      ::after,
+      ::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        font-size: 62.5%;
+      }
+      body {
+        margin-top: 1em;
+      }
+      .main {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 0.3em;
+        font-size: 4rem;
+        font-weight: bold;
+        border-radius: 10px;
+        /* display: inline; */
+      }
+      .myButtons {
+        background-color: rgb(222, 242, 255);
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+        padding: 1em;
+      }
+      button {
+        padding: 0.5em;
+        border: none;
+        background-color: rgb(0, 183, 255);
+        color: white;
+        border-radius: 0.5em;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myButtons">
+      <button class="add">Add Styling</button>
+      <button class="remove">Remove Styling</button>
+    </div>
+  </body>
+  <script>
+    let div = document.createElement("div");
+    div.className = "main1";
+    div.setAttribute("class", "container");
+    div.id = "myDiv";
+    div.textContent = "My first DIV created with JS";
+    document.body.appendChild(div);
+
+    let add = document.querySelector(".add");
+    add.addEventListener("click", () => {
+      div.setAttribute("class", "container main");
+    });
+
+    let remove = document.querySelector(".remove");
+    remove.addEventListener("click", () => {
+      div.setAttribute("class", "container");
+    });
+  </script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice on Events</title>
+</head>
+
+<body>
+    <div class="buttons">
+        <button class="add">Add LI</button>
+        <button class="remove">Remove Last LI</button>
+    </div>
+    <ul id="ul">
+        <!-- <li>Default</li> -->
+    </ul>
+</body>
+<script>
+
+    let add = document.querySelector(".add")
+    let remove = document.querySelector(".remove")
+    let ul = document.querySelector("ul")
+
+    add.addEventListener("click", () => {
+        let randomValue = parseInt(Math.random() * 100 + 1)
+        let li = document.createElement("li")
+        li.innerHTML = `<span>${randomValue}</span>`
+        ul.appendChild(li)
+    }, false)
+    remove.addEventListener("click", () => {
+        ul.lastChild.remove()
+    }, false)
+
+</script>
+
+</html>

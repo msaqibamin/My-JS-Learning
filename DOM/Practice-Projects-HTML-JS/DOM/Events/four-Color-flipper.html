@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Flipper - CAC</title>
+</head>
+
+<body>
+    <button class="start">Start Change</button>
+    <button class="stop">Stop Change</button>
+</body>
+<script>
+    // Generate a random Color
+    let randomColor = () => {
+        let hax = "0123456789ABCDEF";
+        let color = "#";
+        for (let index = 0; index < 6; index++) {
+            color += hax[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    };
+
+    let id;
+    let startChangingColor = () => {
+        let changingColors = () => {
+            document.body.style.backgroundColor = randomColor();
+            console.log("Color Changed:", randomColor());
+        };
+        if (!id) {
+            id = setInterval(changingColors, 1000);
+        }
+    };
+    let stopChangingColor = function () {
+        clearInterval(id);
+        id = null;
+    };
+    document
+        .querySelector(".start")
+        .addEventListener("click", startChangingColor);
+    document
+        .querySelector(".stop")
+        .addEventListener("click", stopChangingColor);
+</script>
+<!-- 04:51:00 -->
+
+</html>

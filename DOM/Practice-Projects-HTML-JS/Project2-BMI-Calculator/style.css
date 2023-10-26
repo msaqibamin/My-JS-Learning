@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: antiquewhite;
+  color: black;
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.1em solid black;
+  border-radius: 10em;
+  padding: 3em;
+}
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 3rem;
+}
+form {
+  border: 0.1em solid black;
+  padding: 3em;
+
+  border-radius: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+label {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: left;
+  padding: 0.2em 1em;
+}
+input {
+  font-size: 2rem;
+  padding: 0.5em;
+  background: transparent;
+  border-radius: 5px;
+  outline: none;
+  border: 0.1em solid black;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+button {
+  font-size: 2rem;
+  padding: 0.5em 1em;
+  background: transparent;
+  border-radius: 10px;
+  outline: none;
+  font-weight: 500;
+  color: black;
+  border: 0.1em solid black;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+.result {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 2rem;
+}
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin: 1em;
+}
+p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.box {
+  width: 30px;
+  height: 30px;
+  /* border: 0.1em solid black; */
+  border-radius: 50%;
+}
+#reset {
+  font-size: 1.6rem;
+  /* padding: 0.5em 1em; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  font-weight: 500;
+  margin: 1em;
+  transition: all 400ms ease;
+}
+#reset:hover {
+  transform: scale(1.2);
+  font-weight: 500;
+}
+#red {
+  background-color: red;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+#red:hover {
+  transform: scale(1.2);
+}
+#blue {
+  background-color: blue;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+#blue:hover {
+  transform: scale(1.2);
+}
+#green {
+  background-color: green;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+#green:hover {
+  transform: scale(1.2);
+}
+h2 {
+  font-size: 1.8rem;
+}

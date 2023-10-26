@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out</title>
+</head>
+
+<body>
+    <h1>Muhammad Saqib</h1>
+    <button class="btn">Stop</button>
+</body>
+<script>
+
+    let printName = () => {
+        console.log("Muhammad Saqib");
+    }
+    setTimeout(printName, 2000)
+
+
+    let changeText = () => {
+        document.querySelector("h1").textContent = "Saqib"
+    }
+    let change = setTimeout(changeText, 3000)
+    let btn = document.querySelector(".btn").addEventListener("click", () => {
+        clearTimeout(change)
+        console.log("Stopped.");
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: rgb(59, 59, 59); color: white">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    // let ul = document.querySelector(".language")
+    // let li = document.createElement("li")
+    // li.textContent = "New Created"
+    // ul.appendChild(li)
+
+    // function addLanguage(lang) {
+    //   let li = document.createElement("li");
+    //   li.innerHTML = lang;
+    //   let ul = document.querySelector(".language");
+    //   ul.appendChild(li);
+    // }
+    // addLanguage("Python");
+    // addLanguage("Java");
+    // addLanguage("C++");
+
+    // --------- Optimized Method to Create Li and add value ---------
+    function optimizedMethod(language) {
+      let li = document.createElement("li");
+      li.appendChild(document.createTextNode(language));
+      document.querySelector(".language").appendChild(li);
+    }
+    // optimizedMethod("Python");
+    // optimizedMethod("Java");
+    // optimizedMethod("GoLang");
+    // optimizedMethod("C++");
+    // optimizedMethod("Java");
+
+    // --------- Edit Li value ---------
+    // let secondOption = document.querySelector("li:nth-child(5)");
+    // let newLi = document.createElement("li");
+    // newLi.appendChild(document.createTextNode("Ruby"));
+    // secondOption.replaceWith(newLi);
+
+    // --------- Edit Practice ---------
+    // let selection = document.querySelector("li:nth-child(4)");
+    // let newLi = document.createElement("li");
+    // newLi.appendChild(document.createTextNode("Ruby"));
+    // selection.replaceWith(newLi);
+
+    // --------- Remove Li Element ---------
+    // let removeLi = document.querySelector("li:last-child");
+    // removeLi.remove();
+
+    // --------- Practice ---------
+    // Add Li in Ul
+    function addLi(language) {
+      let li = document.createElement("li");
+      li.appendChild(document.createTextNode(language));
+      let ul = document.querySelector(".language");
+      ul.appendChild(li);
+    }
+    addLi("python");
+    addLi("typescript");
+    addLi("Ruby");
+    addLi("C++");
+    addLi("C");
+    addLi("GoLang");
+    addLi("PHP");
+
+    // Edit LI
+    /*
+    let li = document.querySelector("li:nth-Child(3)");
+    let li = document.querySelector("li:first-child");
+    let li = document.querySelector("li:last-child");
+    let newLi = document.createElement("li");
+    newLi.appendChild(document.createTextNode("Larvel-PHP"));
+    li.replaceWith(newLi);
+    */
+
+    // Remove Li
+    /*
+    let removeLi = document.querySelector("li:first-child");
+    removeLi.remove();
+    */
+  </script>
+</html>

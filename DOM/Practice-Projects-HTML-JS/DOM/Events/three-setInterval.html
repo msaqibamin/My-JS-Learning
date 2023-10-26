@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out</title>
+</head>
+
+<body>
+    <h1>Set Interval</h1>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+</body>
+<script>
+
+
+    /*
+
+    // Basic about Set interval.
+
+    let startRandom = (str) => {
+        console.log(str, parseInt(Math.random() * 100 + 1))
+    }
+    timer = setInterval(startRandom, 1000, "Random Number is: ")
+    */
+
+    let timer = undefined
+    document.querySelector(".start").addEventListener("click", (str) => {
+        timer = setInterval((str) => {
+            console.log(str, parseInt(Math.random() * 100 + 1));
+        }, 1000, "Random Numbe is: ");
+    }, false)
+
+
+
+    document.querySelector(".stop").addEventListener("click", () => {
+        clearInterval(timer)
+    }, false)
+
+</script>
+<!-- 04:33:00 -->
+
+</html>

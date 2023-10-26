@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Logger | DOM</title>
+    <style>
+      .key {
+        background-color: black;
+        font-size: 35px;
+        font-weight: 900;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .result {
+        background-color: black;
+        font-size: 35px;
+        font-weight: 900;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .Key {
+        border: 1px solid black;
+        font-size: 20px;
+        border-radius: 5px;
+        height: auto;
+        width: 900px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="insert">
+      <div class="key">Record Your Key Strokes</div>
+      <div class="result"></div>
+      <div class="Key"></div>
+    </div>
+  </body>
+  <script>
+    console.log(window);
+
+    let result = document.querySelector(".result");
+    let Key = document.querySelector(".key");
+    let key = [];
+
+    window.addEventListener("keydown", (e) => {
+      result.innerHTML = `You have pressed ${
+        e.key === " " ? "Space Bar" : e.key
+      } with key code ${e.keyCode}.`;
+      key.push(e.key);
+      Key.innerHTML = key;
+      //   console.log(window);
+    });
+  </script>
+</html>

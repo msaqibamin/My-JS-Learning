@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Close Browser | DOM</title>
+    <style>
+      body {
+        background-color: #414141;
+        color: white;
+        max-width: 100vw;
+        width: 90%;
+        margin: auto;
+      }
+      .arrayOfKeys {
+        border: 2px solid black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">Press "c" to close the browser window</div>
+    <div class="Key"></div>
+  </body>
+  <script>
+    let Key = document.querySelector(".Key");
+    let keyArr = [];
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "c") {
+        window.close();
+      } else {
+        keyArr.push(e.key);
+        Key.textContent = keyArr;
+      }
+    });
+  </script>
+</html>

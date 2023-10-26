@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper | DOM</title>
+    <style>
+        body {
+            background-color: #414141;
+            color: whitesmoke
+        }
+
+        .container {
+            background-color: whitesmoke;
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 500px;
+            width: 700px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .wrapper {
+            background-color: whitesmoke;
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 480px;
+            width: 680px;
+            margin: auto;
+            /* display: flex;
+            justify-content: flex-start;
+            flex-direction: column; */
+
+        }
+
+        .heading {
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        h1 {
+            padding: 5px;
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+
+        .color-Holder {
+            background-color: white;
+            width: 400px;
+            height: 60px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+
+        .text {
+            color: black;
+            font-size: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btnStart,
+        .btnStop {
+            border: none;
+            outline: none;
+            padding: 10px;
+            color: white;
+            background-color: rgb(21, 203, 248);
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="heading">
+                <h1>Color Flipper</h1>
+            </div>
+            <div class="colors">
+                <div class="color-Holder">
+                    <div class="text">red <span class="red-value"></span></div>
+                    <div class="text">green <span class="green-value"></span></div>
+                    <div class="text">blue <span class="blue-value"></span></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btnStart">Start Change</button>
+                <button class="btnStop">Stop Change</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    let btnStart = document.querySelector(".btnStart")
+    let btnStop = document.querySelector(".btnStop")
+    let timer
+
+    let colorChanger = () => {
+        let redValue = document.querySelector(".red-value")
+        let greenValue = document.querySelector(".green-value")
+        let blueValue = document.querySelector(".blue-value")
+        let wrapper = document.querySelector(".wrapper")
+        let rgb = undefined
+
+        let randomRed = parseInt(Math.random() * 255 + 1)
+        let randomBlue = parseInt(Math.random() * 255 + 1)
+        let randomGreen = parseInt(Math.random() * 255 + 1)
+
+        let r = redValue.innerHTML = randomRed
+        let g = greenValue.innerHTML = randomGreen
+        let b = blueValue.innerHTML = randomRed
+
+        // rgb(190, 82, 82);
+
+
+        wrapper.style.backgroundColor = `rgb(${r},${g},${b})`
+
+    }
+
+    btnStart.addEventListener("click", () => {
+        timer = setInterval(colorChanger, 1000)
+    })
+
+    btnStop.addEventListener("click", () => {
+        clearInterval(timer)
+    })
+</script>
+
+</html>

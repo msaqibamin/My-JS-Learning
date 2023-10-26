@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Events | DOM</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue">
+  <h2>Amazing Images</h2>
+  <div>
+    <ul id="images">
+      <li>
+        <img id="programming1" alt="first"
+          src="https://images.pexels.com/photos/249798/pexels-photo-249798.png?auto=compress&cs=tinysrgb&w=100" />
+      </li>
+      <li>
+        <img id="programming2" alt="second"
+          src="https://images.pexels.com/photos/5700184/pexels-photo-5700184.jpeg?auto=compress&cs=tinysrgb&w=100" />
+      </li>
+      <li>
+        <img id="programming3" alt="third"
+          src="https://images.pexels.com/photos/4385547/pexels-photo-4385547.jpeg?auto=compress&cs=tinysrgb&w=100" />
+      </li>
+      <li>
+        <img id="programming4" alt="fourth"
+          src="https://images.pexels.com/photos/6804595/pexels-photo-6804595.jpeg?auto=compress&cs=tinysrgb&w=100" />
+      </li>
+      <li>
+        <img id="programming5" alt="fifth"
+          src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=100" />
+      </li>
+      <a style="color: aliceblue" href="https://google.com" id="google">Google</a>
+    </ul>
+  </div>
+</body>
+<script>
+  // addEventListner ka third element default "false" hota hay.
+  // type, timestamp, preventDetault, target, toElement, srcElement, currentTarget
+  // clientX, clientY, offsetX, offsetY, screenX, screenY
+  // altKey, ctrlKey, shiftKey, keyCode
+
+  //Event Propogation (bubbling/capturing)
+  // Bubbling = bottom to top = child to parent (false)
+  // Capturing = top to bottom = parent to child (true)
+  // .stopPropagation() propogation ko stop karnay ka kaam karta hay kay wo parent element tak na jiay.
+
+  // document.querySelector("#images").addEventListener(
+  //   "click",
+  //   function (e) {
+  //     console.log(`click inside the ul`);
+  //   },
+  //   false
+  // );
+  // document.querySelector("#programming3").addEventListener(
+  //   "click",
+  //   function (e) {
+  //     e.stopPropagation();
+  //     console.log(`Third picture clicked`);
+  //   },
+  //   false
+  // );
+
+  // document.querySelector("#google").addEventListener(
+  //   "click",
+  //   function (e) {
+  //     e.stopPropagation();
+  //     e.preventDefault();
+  //     console.log(`Google clicked`);
+  //   },
+  //   false
+  // );
+  let ul = document.querySelector("ul")
+  ul.addEventListener("click", function (e) {
+    e.preventDefault()
+    e.stopPropagation()
+    // console.log(e.target);
+    // console.log(e.target.parentNode);
+    console.log(e.target.tagName);
+    if (e.target.tagName === "IMG") {
+      console.log(e.target.id);
+      let removeit = e.target.parentNode
+      removeit.remove()
+    }
+
+  }, false)
+
+</script>
+
+</html>
+
+</html>

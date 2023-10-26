@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: antiquewhite;
+  color: black;
+  /* border: 1px solid black; */
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+}
+.container {
+  height: 100vh;
+  gap: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 1em;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1.5em;
+  height: auto;
+  width: auto;
+  border: 1px solid black;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+h1 {
+  font-size: 3.5rem;
+}
+p {
+  font-size: 1.5rem;
+  padding: 0.5em;
+}
+.inputBox {
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: none;
+  width: 200px;
+  padding: 0.5em;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  color: crimson;
+  background: transparent;
+}
+.btn {
+  padding: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  background: transparent;
+  border-radius: 0.5em;
+  width: 150px;
+  cursor: pointer;
+  transition: all ease 400ms;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+h3 {
+  font-size: 1.8rem;
+  color: crimson;
+  text-align: center;
+  margin-top: 0.5em;
+}
+span {
+  font-size: 2rem;
+  margin-top: 0.5em;
+  color: crimson;
+  font-weight: 900;
+}

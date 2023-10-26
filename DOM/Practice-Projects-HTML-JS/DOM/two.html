@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relations |Parent & Child| in DOM</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(49, 49, 49);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thrusday</div>
+      <div class="day">Friday</div>
+      <div class="day">Sarurday</div>
+      <div class="day">Sunday</div>
+    </div>
+  </body>
+  <script>
+    // ------------ Selecting Elements with For loop ------------
+    // let parent = document.querySelector(".parent");
+    // console.log(parent);
+    // console.log(parent.children[0]);
+    // console.log(parent.children[0].innerText);
+
+    // ------------ For loop to access all childern of parent ------------
+    /*
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerText);
+    }
+    */
+
+    // parent.children[3].style.backgroundColor = "red";
+    // parent.firstElementChild.style.backgroundColor = "green"; // access first child
+    // parent.lastElementChild.style.backgroundColor = "blue"; // access last child
+
+    // ------------ Selection of Parent after selecting child ------------
+    // let childSelection = document.querySelector(".day");
+    // console.log(childSelection);
+    // console.log(childSelection.parentElement);
+
+    // ------------ Selection of nextElementSibling after selecting child ------------
+    // console.log(childSelection.nextElementSibling);
+
+    // ------------ Selection of chileNode after selecting Parent ------------
+    // childNodes main hamain tamam nodes to miltay hain magar sath hi sath or bhi values di jati hain jis tarha agar ham aik line likhnay kay baad enter dabatay hain to us ko bhi aik text node consider kia jata hay.
+    // console.log(parent.childNodes);
+
+    // ------------ Practice ------------
+
+    let parent = document.querySelector(".parent");
+    console.log(parent);
+    // console.log(parent.children);
+    // console.log((parent.children[1].style.color = "red"));
+    // console.log((parent.firstElementChild.style.color = "red"));
+    // console.log((parent.lastElementChild.style.color = "red"));
+    let child = document.querySelector(".day");
+    // console.log(child.parentElement);
+    // console.log(child.elementS);
+    // console.log(child.parentNode);
+  </script>
+</html>
